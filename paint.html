@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Paint</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvasOverlay"></canvas>
+    <div id="toolbars">
+
+        <div class="drawTool">
+            <button id="pen" class="selected mdi mdi-pencil"></button>
+            <button id="circle" class=" mdi mdi-shape-circle-plus"></button>
+            <button id="polygon" class=" mdi mdi-shape-polygon-plus"></button>
+        </div>
+        <div id="colorsPallet">
+            <div class="colors" style="background-color:red; color:rgba(255, 0, 0, 0.8)"></div>
+            <div class="colors" style="background-color:green; color:rgba(0, 128, 0, 0.8)"></div>
+            <div class="colors" style="background-color:yellow; color:rgba(255, 255, 0,0.8)"></div>
+            <div class="colors slected" style="background-color:blue; color:rgba(0, 0, 255, 0.8)"></div>
+            <div class="colors" style="background-color:black; color:rgba(0, 0, 0, 0.8)"></div>
+            <div class="colors" style="background-color:darkmagenta ;color:rgba(139, 0, 139, 0.8)"></div>
+            <div class="colors" style="background-color:brown; color:rgba(165, 42, 42, 0.8)"></div>
+            <div id="customColor" class="colors" style="background-color:chocolate; color:rgba(210, 105, 30, 0.8)">
+               <input type="color">
+            </div>
+        </div>
+
+        <div>
+            <button id="clear" class="mdi mdi-delete-forever"></button>
+            <button id="eraser" class="mdi mdi-eraser"></button>
+            <button id="sinWave" class="mdi mdi-chart-timeline-variant-shimmer"></button>
+            <input id="lineWidth" type="range" value="1" />
+
+
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

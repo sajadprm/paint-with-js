@@ -1,0 +1,132 @@
+
+.pointerContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+
+    span {
+        background-color: #fff;
+        padding: 10px;
+    }
+
+
+
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#toolbars {
+    width: 100vw;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+
+    & .selected {
+        background-color:#3081c9;
+        color: #fff;
+
+    }
+
+
+    & button {
+        width: 40px ;
+        height: 40px;
+        border: 1px solid #444;
+        font-size: 26px;
+        text-align: center;
+        line-height: 26px;
+        margin: 0 10px;
+        border-radius: 50%;
+        cursor: pointer !important;
+        
+    
+    }  
+    & div.drawTool
+    {
+        margin-right: 130px !important;
+    }
+      
+
+    #colorsPallet {
+       
+
+        input{
+            opacity: 0;
+        }
+        
+
+        .colors {
+            box-sizing: border-box;
+            transition: box-shadow linear 100ms, filter linear 200ms, border cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+            filter: brightness(0.9);
+
+
+            &.slected {
+                border: 10px solid rgba(0, 0, 0, 0.2);
+                pointer-events: none;
+                box-shadow: 0 6px 20px;
+                filter: brightness(1);
+            }
+            
+
+            &:hover {
+                box-shadow: 0 3px 6px;
+                filter: brightness(1);
+            }
+        }
+        & #customColor
+            {
+                pointer-events: initial;
+
+            }
+
+    }
+
+    
+
+    & div:not(#colorsPallet) {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 10px;
+        cursor: url("/assets/eyedropper-variant.png"), auto;
+
+
+
+    }
+
+    & > div {
+        display: flex;
+        align-items: center;
+        &:first-of-type:before
+        {
+            display: none;
+        }
+
+        &::before {
+            content:'';
+            border-left: 1px solid #3c3e3f;
+            margin: 0 10px;
+            height: 80%;
+            
+        }
+
+       
+    }
+
+}
